@@ -9,7 +9,7 @@ services:
     depends_on:
       - api-gateway
     environment:
-      - NEXT_PUBLIC_API_BASE_URL=http://31.97.86.247:8080
+      - NEXT_PUBLIC_API_BASE_URL=http://localhost:8080
     restart: unless-stopped
 
   # ─────────────── BACKEND ────────────────
@@ -31,7 +31,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/EcommerceDB?createDatabaseIfNotExist=true
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=ecommerce123
+      - SPRING_DATASOURCE_PASSWORD=
     restart: unless-stopped
 
   chat-service:
@@ -44,7 +44,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/EcommerceDB?createDatabaseIfNotExist=true
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=ecommerce123
+      - SPRING_DATASOURCE_PASSWORD=
     restart: unless-stopped
 
   client-service:
@@ -57,7 +57,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/EcommerceDB?createDatabaseIfNotExist=true
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=ecommerce123
+      - SPRING_DATASOURCE_PASSWORD=
     restart: unless-stopped
 
   eureka-server:
@@ -81,7 +81,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/EcommerceDB?createDatabaseIfNotExist=true
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=ecommerce123
+      - SPRING_DATASOURCE_PASSWORD=
     restart: unless-stopped
 
   orchestrator-service:
@@ -94,7 +94,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/EcommerceDB?createDatabaseIfNotExist=true
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=ecommerce123
+      - SPRING_DATASOURCE_PASSWORD=
     restart: unless-stopped
 
   order-pay-service:
@@ -107,7 +107,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/EcommerceDB?createDatabaseIfNotExist=true
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=ecommerce123
+      - SPRING_DATASOURCE_PASSWORD=
     restart: unless-stopped
 
   product-service:
@@ -120,7 +120,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/EcommerceDB?createDatabaseIfNotExist=true
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=ecommerce123
+      - SPRING_DATASOURCE_PASSWORD=
     restart: unless-stopped
 
   # ─────────────── MYSQL ────────────────
@@ -137,3 +137,4 @@ services:
 
 volumes:
   mysql_data:
+
